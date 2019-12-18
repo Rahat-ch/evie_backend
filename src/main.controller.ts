@@ -1,15 +1,17 @@
 import { Application } from 'express';
-import { EvieService } from './services/evie.service'
+import { UserService } from './services/user.service'
 
 export class Controller {
-  private evieService: EvieService;
+  private userService: UserService;
 
   constructor(private app: Application) {
-    this.evieService = new EvieService();
+    this.userService = new UserService();
     this.routes();
   }
 
   public routes() {
-    this.app.route('/').get(this.evieService.welcomeMessage);
+    this.app.route('/').get(this.userService.welcomeMessage);
+    this.app.route('/users').get(this.userService.getAllUsers);
+    this.app.route('/user').post(this.userService.addNewUser);
   }
 }
