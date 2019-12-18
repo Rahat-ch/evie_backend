@@ -2,6 +2,8 @@ import express, { Application } from 'express';
 import { Controller } from './main.controller';
 import bodyParser from 'body-parser';
 import cors from 'cors';
+import mongoose from 'mongoose';
+import { MONGO_URI } from './constants/evieApi.constants'
 
 class App {
   public app: Application;
@@ -11,6 +13,7 @@ class App {
   constructor() {
     this.app = express();
     this.setConfig();
+    this.setMongoConfig();
 
     //create and assign a new instance of our controller
     this.evieController = new Controller(this.app);
@@ -25,6 +28,14 @@ class App {
 
     //enables cors
     this.app.use(cors());
+  }
+
+  //connecting to our mongodb database
+  private setMongoConfig() {
+    mongoose.Promise = global.Promise;
+    mongoose.connect(MONGO_URI, {
+      useNewUrlParser: true
+    })
   }
 }
 
