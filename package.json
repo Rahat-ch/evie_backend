@@ -1,0 +1,27 @@
+{
+  "name": "evie_backend",
+  "version": "1.0.0",
+  "description": "Backend for Evie Chrome Extension and Sentiment Analaysi",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "author": "Rahat Chowdhury and Ashraful Malik",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.1"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.1",
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.2",
+    "@types/mongoose": "^5.5.34",
+    "@types/node": "^12.12.20",
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
+  }
+}
