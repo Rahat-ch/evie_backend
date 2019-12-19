@@ -1,7 +1,7 @@
 {
   "name": "evie_backend",
   "version": "1.0.0",
-  "description": "Backend for Evie Chrome Extension and Sentiment Analaysi",
+  "description": "Backend for Evie Chrome Extension and Sentiment Analaysis",
   "main": "index.js",
   "scripts": {
     "start": "npm run build && node dist/server.js",
