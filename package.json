@@ -1,14 +1,14 @@
 {
   "name": "evie_backend",
   "version": "1.0.0",
-  "description": "Backend for Evie Chrome Extension and Sentiment Analaysis",
+  "description": "Backend for Evie Chrome Extension and Sentiment Analysis",
   "main": "index.js",
   "scripts": {
     "start": "npm run build && node dist/server.js",
     "start:dev": "nodemon",
     "build": "rimraf ./dist && tsc"
   },
-  "author": "Rahat Chowdhury and Ashraful Malik",
+  "author": "Rahat Chowdhury and Ashraful Mallik",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",

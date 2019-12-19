@@ -39,7 +39,7 @@ sample json object for creating a user:
 ```
 {
   "username": "Rahat",
-  "email": "rahatcodes.com"
+  "email": "rahat@rahatcodes.com"
 }
 ```
 Once you hit send you should get back something similar to this:
