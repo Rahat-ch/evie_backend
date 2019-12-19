@@ -1,10 +1,14 @@
-import mongoose from 'mongoose'
+import mongoose, { Schema, Document } from 'mongoose'
+import { IUser } from './user.model'
 
-const ScoreSchema = new mongoose.Schema({
-  username: {
-    type: String,
-    required: true
-  },
+export interface IScore extends Document {
+  score: number;
+  url: string;
+  dateVisited: string;
+  user: IUser['_id']
+}
+
+const ScoreSchema = new Schema({
   score: {
     type: Number,
     required: true
@@ -16,6 +20,10 @@ const ScoreSchema = new mongoose.Schema({
   dateVisited: {
     type: Date,
     default: Date.now,
+    required: true
+  },
+  user: {
+    type: Schema.Types.ObjectId,
     required: true
   }
 });

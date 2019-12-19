@@ -19,7 +19,6 @@ export class UserService {
   }
 
   public addNewUser(req: Request, res: Response) {
-    console.log(req.body);
     const newUser = new User(req.body);
     newUser.save((error: Error, user: MongooseDocument) => {
       if (error) {
