@@ -4,7 +4,9 @@
   "description": "Backend for Evie Chrome Extension and Sentiment Analaysi",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon"
+    "start:dev": "nodemon",
+    "build": "rimraf ./dist && tsc",
+    "start": "npm run build && node dist/server.js"
   },
   "author": "Rahat Chowdhury and Ashraful Malik",
   "license": "ISC",
@@ -21,6 +23,7 @@
     "@types/mongoose": "^5.5.34",
     "@types/node": "^12.12.20",
     "nodemon": "^2.0.2",
+    "rimraf": "^3.0.0",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.3"
   }
