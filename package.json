@@ -4,9 +4,9 @@
   "description": "Backend for Evie Chrome Extension and Sentiment Analysis",
   "main": "index.js",
   "scripts": {
+    "start": "npm run build && node dist/server.js",
     "start:dev": "nodemon",
-    "build": "rimraf ./dist && tsc",
-    "start": "npm run build && node dist/server.js"
+    "build": "rimraf ./dist && tsc"
   },
   "author": "Rahat Chowdhury and Ashraful Mallik",
   "license": "ISC",
